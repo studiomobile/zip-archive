@@ -1,13 +1,10 @@
-//
-//  ZipArchive.h
-//  ZipArchive
-//
-//  Created by Sergey Martynov on 08.12.11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
+extern NSString* kZipArchiveErrorDomain;
+
 @interface ZipArchive : NSObject
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination;
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error;
 
 @end

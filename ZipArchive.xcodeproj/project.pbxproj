@@ -9,14 +9,28 @@
 /* Begin PBXBuildFile section */
 		B4DBE76114911F6800D6EC63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DBE76014911F6800D6EC63 /* Foundation.framework */; };
 		B4DBE76714911F6800D6EC63 /* ZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBE76614911F6800D6EC63 /* ZipArchive.m */; };
+		B4DBE7921491213400D6EC63 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DBE7891491213400D6EC63 /* crypt.h */; };
+		B4DBE7931491213400D6EC63 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = B4DBE78A1491213400D6EC63 /* ioapi.c */; };
+		B4DBE7941491213400D6EC63 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DBE78B1491213400D6EC63 /* ioapi.h */; };
+		B4DBE7971491213400D6EC63 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = B4DBE78E1491213400D6EC63 /* unzip.c */; };
+		B4DBE7981491213400D6EC63 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DBE78F1491213400D6EC63 /* unzip.h */; };
+		B4DBE7991491213400D6EC63 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = B4DBE7901491213400D6EC63 /* zip.c */; };
+		B4DBE79A1491213400D6EC63 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DBE7911491213400D6EC63 /* zip.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4DBE75D14911F6800D6EC63 /* libZipArchive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DBE76014911F6800D6EC63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B4DBE76414911F6800D6EC63 /* ZipArchive-Prefix.pch */ = {isa = PBXFileReference; path = "ZipArchive-Prefix.pch"; sourceTree = "<group>"; };
-		B4DBE76514911F6800D6EC63 /* ZipArchive.h */ = {isa = PBXFileReference; path = ZipArchive.h; sourceTree = "<group>"; };
+		B4DBE76414911F6800D6EC63 /* ZipArchive-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZipArchive-Prefix.pch"; sourceTree = "<group>"; };
+		B4DBE76514911F6800D6EC63 /* ZipArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		B4DBE76614911F6800D6EC63 /* ZipArchive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZipArchive.m; sourceTree = "<group>"; };
+		B4DBE7891491213400D6EC63 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		B4DBE78A1491213400D6EC63 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		B4DBE78B1491213400D6EC63 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		B4DBE78E1491213400D6EC63 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		B4DBE78F1491213400D6EC63 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		B4DBE7901491213400D6EC63 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		B4DBE7911491213400D6EC63 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,7 @@
 		B4DBE76214911F6800D6EC63 /* ZipArchive */ = {
 			isa = PBXGroup;
 			children = (
+				B4DBE7881491213400D6EC63 /* minizip */,
 				B4DBE76514911F6800D6EC63 /* ZipArchive.h */,
 				B4DBE76614911F6800D6EC63 /* ZipArchive.m */,
 				B4DBE76314911F6800D6EC63 /* Supporting Files */,
@@ -74,6 +89,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B4DBE7881491213400D6EC63 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBE7891491213400D6EC63 /* crypt.h */,
+				B4DBE78A1491213400D6EC63 /* ioapi.c */,
+				B4DBE78B1491213400D6EC63 /* ioapi.h */,
+				B4DBE78E1491213400D6EC63 /* unzip.c */,
+				B4DBE78F1491213400D6EC63 /* unzip.h */,
+				B4DBE7901491213400D6EC63 /* zip.c */,
+				B4DBE7911491213400D6EC63 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -81,6 +110,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DBE7921491213400D6EC63 /* crypt.h in Headers */,
+				B4DBE7941491213400D6EC63 /* ioapi.h in Headers */,
+				B4DBE7981491213400D6EC63 /* unzip.h in Headers */,
+				B4DBE79A1491213400D6EC63 /* zip.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DBE76714911F6800D6EC63 /* ZipArchive.m in Sources */,
+				B4DBE7931491213400D6EC63 /* ioapi.c in Sources */,
+				B4DBE7971491213400D6EC63 /* unzip.c in Sources */,
+				B4DBE7991491213400D6EC63 /* zip.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,9 +220,14 @@
 		B4DBE76B14911F6800D6EC63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/ZipArchive.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZipArchive/ZipArchive-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/lib,
+					.,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -196,9 +237,14 @@
 		B4DBE76C14911F6800D6EC63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/ZipArchive.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZipArchive/ZipArchive-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/lib,
+					.,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -224,6 +270,7 @@
 				B4DBE76C14911F6800D6EC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
